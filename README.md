@@ -4,23 +4,18 @@
 
 Moamen Mohamed Yehia Zakaria
 
-sec2 BN:14
 
 Youssef Mohamed Wanis Osman
 
-sec2 BN: 39
 
 Amira Yasser Mohamed Riad Ali
 
-sec1 BN:18
 
 Mona Ahmed Mohamed Yakout
 
-sec2 BN:29
 
 Aya Ahmed Farouk Ragab
 
-sec1 BN:22
 
 ## *Welcome to StarRock Stock: Your Personalized Stock Exchange*
 
