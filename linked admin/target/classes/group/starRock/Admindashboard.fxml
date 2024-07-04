@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="543.0" prefWidth="815.0" styleClass="back" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.starRock.AdminController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="600.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="600.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="600.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="600.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="403.0" prefWidth="180.0" styleClass="glass" stylesheets="@Styles.css" GridPane.rowSpan="4">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/home.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Line endX="127.5" startX="-100.0" stroke="#433f3f" strokeWidth="3.0">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Line>
+            <HBox alignment="CENTER" onMouseClicked="#createStock" prefHeight="53.0" prefWidth="242.0" styleClass="admindashboardbutton">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/AddStock.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="createStockButton" mnemonicParsing="false" onAction="#createStock" prefHeight="44.0" prefWidth="187.0" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Create Stock" textFill="#e41616">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" onMouseClicked="#expandStockMarket" prefHeight="43.0" prefWidth="242.0" styleClass="admindashboardbutton" stylesheets="@Styles.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/edit.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="13.0" top="6.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="editStock" mnemonicParsing="false" onAction="#expandStockMarket" prefHeight="44.0" prefWidth="166.0" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Edit Stock" textFill="#e41616">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </HBox>
+            <Line endX="127.5" startX="-100.0" stroke="#433f3f" strokeWidth="3.0" />
+            <Button fx:id="openMarket" mnemonicParsing="false" onAction="#openMarket" prefHeight="70.0" prefWidth="242.0" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Start Session" textFill="#e41616">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeMarket" mnemonicParsing="false" onAction="#closeSession" prefHeight="70.0" prefWidth="243.0" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Close Session" textFill="#e41616">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeMarket2" mnemonicParsing="false" onAction="#createUser" prefHeight="70.0" prefWidth="243.0" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Create User" textFill="#e41616">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeMarket1" mnemonicParsing="false" onAction="#removeUser" prefHeight="70.0" prefWidth="243.0" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Remove User" textFill="#e41616">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="glass" stylesheets="@Styles.css" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+         <children>
+            <Button mnemonicParsing="false" onAction="#refresh" prefHeight="43.0" prefWidth="141.0" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Refresh">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <TableView fx:id="userList" prefHeight="329.0" prefWidth="242.0" styleClass="table-cell" stylesheets="@Styles.css" />
+            <VBox alignment="CENTER" prefHeight="0.0" prefWidth="242.0" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="103.0" prefWidth="242.0" styleClass="glass" stylesheets="@Styles.css" GridPane.columnIndex="1" GridPane.columnSpan="2">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+         <children>
+            <Label text=" ">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="403.0" prefWidth="180.0" styleClass="glass" stylesheets="@Styles.css" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+         <children>
+            <Label fx:id="noCompanies" style="-fx-text-fill: red;" text="No Companies">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <LineChart fx:id="lineChart" prefHeight="354.0" prefWidth="231.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+               <VBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </LineChart>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="19.0" fitWidth="19.0" onMouseClicked="#expandStockMarket" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Expand.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="cycleThroughCompanies" mnemonicParsing="false" onAction="#cycleThroughCompanies" styleClass="admindashboardbutton" stylesheets="@Styles.css" text="Next Company">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="403.0" prefWidth="180.0" styleClass="glass" stylesheets="@Styles.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+         <children>
+            <Label text="Trading Session is">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="marketStatues" text="Market Statues" textFill="#8f2424">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

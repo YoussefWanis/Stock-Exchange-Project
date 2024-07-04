@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="600.0" styleClass="back" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.starRock.CreateController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.5" minWidth="10.0" prefWidth="45.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="517.0" minWidth="10.0" prefWidth="517.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="45.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="140.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="481.5" minHeight="10.0" prefHeight="434.5" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="140.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="335.0" prefWidth="515.0" styleClass="glass" stylesheets="@Styles.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="515.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/companyicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="65.0" text="Name">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextField fx:id="nameField" prefHeight="26.0" prefWidth="395.0" promptText="Compnay Name" styleClass="text-field-admin" stylesheets="@Styles.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="45.0" right="45.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="companyNameWarning" prefHeight="17.0" prefWidth="416.0" style="-fx-text-fill: red;" text="This field is required" textFill="#b20b0b">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="32.0" prefWidth="515.0">
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/price.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="65.0" text="Price">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextField fx:id="priceField" prefHeight="26.0" prefWidth="395.0" promptText="Current Price" styleClass="text-field-admin" stylesheets="@Styles.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="45.0" right="45.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="currentPriceWarning" prefHeight="17.0" prefWidth="416.0" style="-fx-text-fill: red;" text="This field is required" textFill="#b20b0b">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="515.0">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/VolumeIcon.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="83.0" text="Volume">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextField fx:id="volumeField" prefHeight="26.0" prefWidth="395.0" promptText="Volume" styleClass="text-field-admin" stylesheets="@Styles.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="45.0" right="45.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="volumeWarning" prefHeight="17.0" prefWidth="416.0" style="-fx-text-fill: red;" text="This field is required" textFill="#b20b0b">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="addStockButton" mnemonicParsing="false" onAction="#addStock" prefHeight="25.0" prefWidth="80.0" styleClass="greenButton" stylesheets="@Styles.css" text="Add">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="45.0" right="45.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

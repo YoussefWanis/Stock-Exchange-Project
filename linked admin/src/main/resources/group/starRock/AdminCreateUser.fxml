@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="back" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.starRock.RegisterController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="50.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="391.0" minWidth="10.0" prefWidth="391.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="50.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="266.0" minHeight="10.0" prefHeight="266.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="glass" stylesheets="@Styles.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label prefHeight="31.0" prefWidth="61.0" text="Username">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="UsernameField" prefHeight="26.0" prefWidth="338.0" promptText="username" styleClass="text-field-admin" stylesheets="@Styles.css">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="45.0" right="45.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Create a Password">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="PasswordField" promptText="password" styleClass="text-field-admin" stylesheets="@Styles.css">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="45.0" right="45.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Initial Credits">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="BalanceField" promptText="balance" styleClass="text-field-admin" stylesheets="@Styles.css">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="45.0" right="45.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="PremiumCheck" mnemonicParsing="false" prefHeight="12.0" prefWidth="10.0" stylesheets="@Styles.css" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </CheckBox>
+                  <Label prefHeight="19.0" prefWidth="71.0" text="Premium?">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Submit" prefHeight="25.0" prefWidth="100.0" styleClass="greenButton" stylesheets="@Styles.css" text="Register">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</GridPane>
